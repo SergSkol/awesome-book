@@ -1,13 +1,13 @@
-const storageKey = "awesomeBooks";
+const storageKey = 'awesomeBooks';
 const currentFormTitle = document.querySelector('#title');
 const currentFormAuthor = document.querySelector('#author');
 const currentFormBookAddButton = document.querySelector('#book-add-button');
 const arrBooks = [];
 
 function removeBook(id) {
-  for (let i=0;i<arrBooks.length;i++) {
-    if (arrBooks[i].id==id) {
-      arrBooks.splice(i, 1); 
+  for (let i = 0; i < arrBooks.length; i++) {
+    if (arrBooks[i].id === id) {
+      arrBooks.splice(i, 1);
     }
   }
 }
@@ -15,13 +15,13 @@ function removeBook(id) {
 function addBook() {
   let maxId = 0;
   arrBooks.forEach((book) => {
-    if (book.id>maxId) {
+    if (book.id > maxId) {
       maxId = book.id;
     }
   });
 
   const newBook = {
-    id: maxId+1,
+    id: maxId + 1,
     title: currentFormTitle.value,
     author: currentFormAuthor.value,
   };
@@ -63,10 +63,10 @@ function loadDataFromLocalStorage() {
 
   if (dataLoaded !== null) {
     dataLoaded.forEach((book) => {
-      let newBook = {
+      const newBook = {
         id: 0,
-        title: "",
-        author: "",
+        title: '',
+        author: '',
       };
 
       newBook.id = book.id;
