@@ -2,6 +2,21 @@
   list-style: none;
 }
 
+.description {
+  margin-bottom: 10px;
+}
+
+button#book-add-button {
+  margin-top: 10px;
+}
+
 .book-item {
   border-bottom: 1px solid #000;
+  padding: 10px 10px;
 }
+
+.book-title,
+.book-author {
+  margin-bottom: 5px;
+}
+
