@@ -1,0 +1,7 @@
+.nobulls {
+  list-style: none;
+}
+
+.book-item {
+  border-bottom: 1px solid #000;
+}
