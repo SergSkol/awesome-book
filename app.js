@@ -5,7 +5,7 @@ const currentFormBookAddButton = document.querySelector('#book-add-button');
 const arrBooks = [];
 
 function removeBook(id) {
-  for (let i = 0; i < arrBooks.length; i +=1) {
+  for (let i = 0; i < arrBooks.length; i +=1 ) {
     if (arrBooks[i].id === id) {
       arrBooks.splice(i, 1);
     }
