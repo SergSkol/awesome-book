@@ -44,9 +44,8 @@ function showBooks() {
   arrBooks.forEach((book) => {
     const bookItem = addElement('div', bookList, 'book-item');
     const bookTitle = addElement('div', bookItem, 'book-title');
-    bookTitle.innerHTML = book.title;
-    const bookAuthor = addElement('div', bookItem, 'book-author');
-    bookAuthor.innerHTML = book.author;
+    bookTitle.innerHTML = book.title + " by " +  book.author;
+    
     const bookRemoveButton = addElement('button', bookItem, 'book-remove-button');
     bookRemoveButton.innerHTML = 'Remove';
 
