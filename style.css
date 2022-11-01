@@ -15,6 +15,10 @@ button#book-add-button {
   padding: 10px 10px;
 }
 
+.book-list:nth-child(odd) {
+  background-color: #3e3e3e;
+}
+
 .book-title,
 .book-author {
   margin-bottom: 5px;
