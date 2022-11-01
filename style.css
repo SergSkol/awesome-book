@@ -1,3 +1,12 @@
+.book-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-list {
+  border: 5px solid #807c7c;
+}
+
 .nobulls {
   list-style: none;
 }
@@ -11,12 +20,12 @@ button#book-add-button {
 }
 
 .book-item {
-  border-bottom: 1px solid #000;
-  padding: 10px 10px;
+  padding: 5px 5px;
+ 
 }
 
-.book-list:nth-child(odd) {
-  background-color: #3e3e3e;
+.book-item:nth-child(even) {
+  background-color: #807c7c;
 }
 
 .book-title,
