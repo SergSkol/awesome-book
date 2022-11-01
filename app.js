@@ -4,7 +4,7 @@ const currentFormAuthor = document.querySelector('#author');
 const currentFormBookAddButton = document.querySelector('#book-add-button');
 
 class Book {
-  constructor (title, author) {
+  constructor(title, author) {
     let newId = 0;
     const timeNow = new Date();
     newId = timeNow.getTime();
@@ -16,7 +16,7 @@ class Book {
 }
 
 class BookShelf {
-  constructor () {
+  constructor() {
     this.arrBooks = [];
   }
 
@@ -35,24 +35,24 @@ class BookShelf {
   saveDataToLocalStorage() {
     localStorage.setItem(storageKey, JSON.stringify(this.arrBooks));
   }
-  
+
   addElement(elementType, parent, className) {
     const element = document.createElement(elementType);
     element.classList.add(className);
     parent.appendChild(element);
     return element;
   }
-  
+
   showBooks() {
     const bookList = document.querySelector('.book-list');
     this.arrBooks.forEach((book) => {
       const bookItem = this.addElement('div', bookList, 'book-item');
       const bookTitle = this.addElement('div', bookItem, 'book-title');
-      bookTitle.innerHTML = '"'+book.title +'"' + " by " +  book.author;
-      
+      bookTitle.innerHTML = `"${book.title}"` + ` by ${book.author}`;
+
       const bookRemoveButton = this.addElement('button', bookItem, 'book-remove-button');
       bookRemoveButton.innerHTML = 'Remove';
-  
+
       bookRemoveButton.addEventListener('click', () => {
         this.removeBook(book.id);
         this.saveDataToLocalStorage();
@@ -60,10 +60,10 @@ class BookShelf {
       });
     });
   }
-  
+
   loadDataFromLocalStorage() {
     const dataLoaded = JSON.parse(localStorage.getItem(storageKey));
-  
+
     if (dataLoaded !== null) {
       dataLoaded.forEach((book) => {
         const newBook = {
@@ -71,7 +71,7 @@ class BookShelf {
           title: '',
           author: '',
         };
-  
+
         newBook.id = book.id;
         newBook.title = book.title;
         newBook.author = book.author;
@@ -82,7 +82,7 @@ class BookShelf {
   }
 }
 
-const awesomeBookShelf = new BookShelf;
+const awesomeBookShelf = new BookShelf();
 
 currentFormBookAddButton.addEventListener('click', () => {
   const title = currentFormTitle.value;

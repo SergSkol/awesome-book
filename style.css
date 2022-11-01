@@ -7,6 +7,10 @@
   border: 5px solid #807c7c;
 }
 
+.app-name {
+  text-align: center;
+}
+
 .nobulls {
   list-style: none;
 }
@@ -19,9 +23,15 @@ button#book-add-button {
   margin-top: 10px;
 }
 
+.book-remove-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .book-item {
   padding: 5px 5px;
- 
+  position: relative;
 }
 
 .book-item:nth-child(even) {
@@ -31,4 +41,12 @@ button#book-add-button {
 .book-title,
 .book-author {
   margin-bottom: 5px;
+}
+
+.form {
+  text-align: center;
+}
+
+.form-title {
+  font-size: 16px;
 }
