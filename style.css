@@ -1,3 +1,16 @@
+.book-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-list {
+  border: 5px solid #807c7c;
+}
+
+.app-name {
+  text-align: center;
+}
+
 .nobulls {
   list-style: none;
 }
@@ -10,12 +23,30 @@ button#book-add-button {
   margin-top: 10px;
 }
 
+.book-remove-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .book-item {
-  border-bottom: 1px solid #000;
-  padding: 10px 10px;
+  padding: 5px 5px;
+  position: relative;
+}
+
+.book-item:nth-child(even) {
+  background-color: #807c7c;
 }
 
 .book-title,
 .book-author {
   margin-bottom: 5px;
+}
+
+.form {
+  text-align: center;
+}
+
+.form-title {
+  font-size: 16px;
 }
