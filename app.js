@@ -13,7 +13,7 @@ class BookShelf {
     const newBook = {
       id: timeNow.getTime(),
       title: newTitle,
-      author: newAuthor
+      author: newAuthor,
     };
 
     this.arrBooks.push(newBook);
@@ -39,9 +39,13 @@ class BookShelf {
     this.arrBooks.forEach((book) => {
       const bookItem = this.addElement('div', bookList, 'book-item');
       const bookTitle = this.addElement('div', bookItem, 'book-title');
-      bookTitle.innerHTML = `"${book.title}"` + ` by ${book.author}`;
+      bookTitle.innerHTML = `" ${book.title} "  +  by ${book.author}`;
 
-      const bookRemoveButton = this.addElement('button', bookItem, 'book-remove-button');
+      const bookRemoveButton = this.addElement(
+        'button',
+        bookItem,
+        'book-remove-button'
+      );
       bookRemoveButton.innerHTML = 'Remove';
 
       bookRemoveButton.addEventListener('click', () => {
