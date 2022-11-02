@@ -93,3 +93,32 @@ button#book-add-button {
 .form-title {
   font-size: 16px;
 }
+
+.footer {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 5px solid #3e3e3e;
+  height: 6vh;
+  /* display: flex;
+  justify-content: space-between; */
+  position: relative;
+}
+
+.footer-title {
+  margin: 5px;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.contributor {
+ position: absolute;
+ right: 0;
+ top: -10px;
+ display: flex;
+ margin: 0 5px;
+
+}
+
+.contributors {
+ padding: 0 5px;
+}
