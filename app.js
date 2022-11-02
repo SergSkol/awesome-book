@@ -44,7 +44,7 @@ class BookShelf {
       const bookRemoveButton = this.addElement(
         'button',
         bookItem,
-        'book-remove-button'
+        'book-remove-button',
       );
       bookRemoveButton.innerHTML = 'Remove';
 
