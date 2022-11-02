@@ -27,24 +27,24 @@ class BookShelf {
     localStorage.setItem(storageKey, JSON.stringify(this.arrBooks));
   }
 
-  showBooks() {
-    function addElement(elementType, parent, className) {
-      const element = document.createElement(elementType);
-      element.classList.add(className);
-      parent.appendChild(element);
-      return element;
-    }
+  addElement(elementType, parent, className) {
+    const element = document.createElement(elementType);
+    element.classList.add(className);
+    parent.appendChild(element);
+    return element;
+  }
 
+  showBooks() {
     const bookList = document.querySelector('.book-list');
     this.arrBooks.forEach((book) => {
-      const bookItem = addElement('div', bookList, 'book-item');
-      const bookTitle = addElement('div', bookItem, 'book-title');
+      const bookItem = this.addElement('div', bookList, 'book-item');
+      const bookTitle = this.addElement('div', bookItem, 'book-title');
       bookTitle.innerHTML = `" ${book.title} "  +  by ${book.author}`;
 
-      const bookRemoveButton = addElement(
+      const bookRemoveButton = this.addElement(
         'button',
         bookItem,
-        'book-remove-button',
+        'book-remove-button'
       );
       bookRemoveButton.innerHTML = 'Remove';
 
