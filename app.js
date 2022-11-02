@@ -27,24 +27,24 @@ class BookShelf {
     localStorage.setItem(storageKey, JSON.stringify(this.arrBooks));
   }
 
-  addElement(elementType, parent, className) {
-    const element = document.createElement(elementType);
-    element.classList.add(className);
-    parent.appendChild(element);
-    return element;
-  }
-
   showBooks() {
+    function addElement(elementType, parent, className) {
+      const element = document.createElement(elementType);
+      element.classList.add(className);
+      parent.appendChild(element);
+      return element;
+    }
+
     const bookList = document.querySelector('.book-list');
     this.arrBooks.forEach((book) => {
-      const bookItem = this.addElement('div', bookList, 'book-item');
-      const bookTitle = this.addElement('div', bookItem, 'book-title');
+      const bookItem = addElement('div', bookList, 'book-item');
+      const bookTitle = addElement('div', bookItem, 'book-title');
       bookTitle.innerHTML = `" ${book.title} "  +  by ${book.author}`;
 
-      const bookRemoveButton = this.addElement(
+      const bookRemoveButton = addElement(
         'button',
         bookItem,
-        'book-remove-button'
+        'book-remove-button',
       );
       bookRemoveButton.innerHTML = 'Remove';
 
@@ -57,7 +57,13 @@ class BookShelf {
   }
 
   loadDataFromLocalStorage() {
-    this.arrBooks = JSON.parse(localStorage.getItem(storageKey));
+    const dataLoaded = JSON.parse(localStorage.getItem(storageKey));
+    if (dataLoaded == null) {
+      this.arrBooks = [];
+    } else {
+      this.arrBooks = dataLoaded;
+    }
+
     this.showBooks();
   }
 }
