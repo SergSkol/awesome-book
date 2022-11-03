@@ -8,11 +8,24 @@
     <title>Awesome books</title>
   </head>
   <body>
+    <header class="book-selection">
+      <h3 class="book-selector">Awesome Book</h3>
+      <ul class="links">
+        <li class="links-desc" id="link-list">List</li>
+        <li class="links-desc" id="link-add">Add new</li>
+        <li class="links-desc" id="link-contact">Contact</li>
+      </ul>
+    </header>
+    <span class="date">
+      <p class="date-time">November 3rd, 2022 | 03:10 am</p>
+    </span>
     <section class="book-container">
-      <h1 class="app-name">Awesome Books</h1>
-      <p class="book-list"></p>
+      <div class="book-shelf">
+        <h1 class="app-name">All Awesome Books</h1>
+        <p class="book-list"></p>
+      </div>
       <form class="form">
-        <h6 class="form-title">Add a new book</h6>
+        <h2 class="form-title">Add a new book</h2>
         <ul class="nobulls">
           <li class="description">
             <input type="text" name="title" id="title" placeholder="Title" />
@@ -28,6 +41,25 @@
         </ul>
       </form>
     </section>
+    <div class="contact">
+      <h2 class="contact-title">Contact information</h2>
+      <p>Do you have any questions or you just want to say 'Hello'?</p>
+      <p>You can reach out to us!</p>
+      <ul>
+        <li>Our e-mail mail@mail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our address: Streethome 22, 84503 City, Country</li>
+      </ul>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <h5 class="footer-title">copyright</h5>
+      <div class="contributor">
+        <p class="contributors">Alelign Ayana</p>
+        <p class="contributors">Diamond Nathaniel</p>
+        <p class="contributors">Sergiy Shkolnik</p>
+      </div>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
