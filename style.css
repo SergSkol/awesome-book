@@ -33,6 +33,7 @@ li {
   border-right: 2px solid #3e3e3e;
   margin: 0 5px;
   padding: 0 5px;
+  cursor: pointer;
 }
 
 .links-desc:hover {
