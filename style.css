@@ -36,7 +36,7 @@ li {
 }
 
 .links-desc:hover {
-  color:blue;
+  color: blue;
 }
 
 .date {
@@ -107,8 +107,6 @@ button#book-add-button {
   margin: 0 auto;
   border: 5px solid #3e3e3e;
   height: 6vh;
-  /* display: flex;
-  justify-content: space-between; */
   position: relative;
 }
 
@@ -119,15 +117,15 @@ button#book-add-button {
 }
 
 .contributor {
- position: absolute;
- right: 0;
- top: -10px;
- display: flex;
- margin: 0 5px;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  display: flex;
+  margin: 0 5px;
 }
 
 .contributors {
- padding: 0 5px;
+  padding: 0 5px;
 }
 
 .hide {
