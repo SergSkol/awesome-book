@@ -35,6 +35,10 @@ li {
   padding: 0 5px;
 }
 
+.links-desc:hover {
+  color:blue;
+}
+
 .date {
   float: right;
   margin-bottom: 30px;
@@ -91,7 +95,11 @@ button#book-add-button {
 }
 
 .form-title {
-  font-size: 16px;
+  font-size: 24px;
+}
+
+.contact-title {
+  text-align: center;
 }
 
 .footer {
@@ -116,9 +124,12 @@ button#book-add-button {
  top: -10px;
  display: flex;
  margin: 0 5px;
-
 }
 
 .contributors {
  padding: 0 5px;
+}
+
+.hide {
+  display: none;
 }

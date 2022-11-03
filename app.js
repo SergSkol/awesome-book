@@ -2,6 +2,14 @@ const storageKey = 'awesomeBooks';
 const currentFormTitle = document.querySelector('#title');
 const currentFormAuthor = document.querySelector('#author');
 const currentFormBookAddButton = document.querySelector('#book-add-button');
+const linkAdd = document.querySelector('#link-add');
+const linkList = document.querySelector('#link-list');
+const linkContact = document.querySelector('#link-contact');
+const books = document.querySelector('.book-shelf');
+const form = document.querySelector('.form');
+const contact = document.querySelector('.contact');
+const dateTime = document.querySelector('.date-time');
+const timeNow = new Date();
 
 class BookShelf {
   constructor() {
@@ -9,7 +17,6 @@ class BookShelf {
   }
 
   addBook(newTitle, newAuthor) {
-    const timeNow = new Date();
     const newBook = {
       id: timeNow.getTime(),
       title: newTitle,
@@ -77,6 +84,28 @@ currentFormBookAddButton.addEventListener('click', () => {
   awesomeBookShelf.saveDataToLocalStorage();
 });
 
+linkList.addEventListener('click', () => {
+  books.classList.remove('hide');
+  form.classList.add('hide');
+  contact.classList.add('hide');
+});
+
+linkAdd.addEventListener('click', () => {
+  books.classList.add('hide');
+  form.classList.remove('hide');
+  contact.classList.add('hide');
+});
+
+linkContact.addEventListener('click', () => {
+  books.classList.add('hide');
+  form.classList.add('hide');
+  contact.classList.remove('hide');
+});
+
 window.onload = () => {
+  books.classList.remove('hide');
+  form.classList.add('hide');
+  contact.classList.add('hide');
   awesomeBookShelf.loadDataFromLocalStorage();
+  dateTime.innerHTML = timeNow;
 };
